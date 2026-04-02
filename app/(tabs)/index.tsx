@@ -1,9 +1,14 @@
 import '@/global.css';
 import { Link } from 'expo-router';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
+import { styled } from 'nativewind';
+import { SafeAreaView as RNSafeAreaView } from 'react-native-safe-area-context';
+
+const SafeAreaView = styled(RNSafeAreaView);
+
 export default function Index() {
   return (
-    <View className='flex-1 justify-center items-center bg-background'>
+    <SafeAreaView className='flex-1 justify-center items-center bg-background'>
       <Text className='text-primary text-5xl font-bold'>Welcome!</Text>
       <Link
         href={'/onboarding'}
@@ -24,6 +29,6 @@ export default function Index() {
       >
         Go to Sign Up{' '}
       </Link>
-    </View>
+    </SafeAreaView>
   );
 }
