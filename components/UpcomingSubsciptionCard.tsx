@@ -1,5 +1,5 @@
 import { formatCurrency } from '@/lib/utils';
-import React from 'react';
+
 import { Image, Text, View } from 'react-native';
 
 const UpcomingSubsciptionCard = ({
@@ -20,7 +20,11 @@ const UpcomingSubsciptionCard = ({
             {formatCurrency(price, currency)}
           </Text>
           <Text className='upcoming-meta' numberOfLines={1}>
-            {daysLeft > 1 ? `${daysLeft} left day` : 'Last day'}
+            {daysLeft > 1
+              ? `${daysLeft} days left`
+              : daysLeft === 1
+                ? '1 day left'
+                : 'Last day'}
           </Text>
         </View>
       </View>

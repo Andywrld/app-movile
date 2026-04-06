@@ -36,11 +36,11 @@ const SubscriptionCard = ({
             <Text className='sub-title text-lg' numberOfLines={2}>
               {name}
             </Text>
-            <Text className='sub-meta' numberOfLines={1}>
+             <Text className='sub-meta' numberOfLines={1}>
               {plan?.trim() || category?.trim() || renewalDate
                 ? formatSubscriptionDateTime(renewalDate)
                 : ''}
-            </Text>
+            </Text> 
           </View>
         </View>
         <View className='sub-price-box'>
@@ -66,7 +66,7 @@ const SubscriptionCard = ({
               </View>
               <View className='sub-row'>
                 <View className='sub-row-copy'>
-                  <Text className='sub-label'>Cateogry:</Text>
+                  <Text className='sub-label'>Category:</Text>
                   <Text
                     className='sub-value'
                     ellipsizeMode='tail'
